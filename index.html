@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet " href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" id="form">
+        <h2>LOGIN</h2>
+    <div class="container">
+    
+        <div class="input">
+            <label>USERNAME</label>
+            <input type="text" id="u1" onChange="checkusername()"required>
+            <p id="r1"></p>
+            <label>PASSWORD</label>
+            <input type="text" id="p1" onChange="checkpassword()"required>
+          
+            <p id="s1"></p>
+            <button>LOGIN</button>
+            <button>RESET</button>
+        </div>
+    </div>
+    <a href="register.html">New user?</a>
+</form>
+<script>
+    function checkusername()
+    {
+        var pattern=/^[a-z]{4}[0-9]{4}$/;
+        var input=document.getElementById("u1").value;
+        if(!pattern.test(input))
+        {
+            document.getElementById("r1").innerHTML="Invalid username";
+            document.getElementById("r1").style ="color :red";
+        }
+        else{
+            document.getElementById("r1").innerHTML="valid username";
+            document.getElementById("r1").style ="color : green";
+        }
+    }
+
+
+
+
+
+    function checkpassword()
+    {
+        var pattern=/^[a-z]{4}[0-9]{4}$/;
+        var input=document.getElementById("p1").value;
+        if(!pattern.test(input))
+        {
+            document.getElementById("s1").innerHTML="Invalid username" ;
+            document.getElementById("s1").style ="color : red";
+        }
+        else{
+            document.getElementById("s1").innerHTML="valid username";
+            document.getElementById("s1").style ="color : green";
+        }
+    }
+</script>
+</body>
+</html>

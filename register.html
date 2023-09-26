@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet " href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.html" id="form1" method="post">
+        <h2>REGISTER</h2>
+    <div class="container1">
+    
+        <div class="input1">
+            <label>USERNAME</label>
+            <input type="text" id="a1" onchange="checkusername()">
+            <p id="b1"></p>
+            <label>EMAIL ID</label>
+            <input type="text" id="a2" onchange="checkEMAIL()">
+            <p id="b2"></p>
+            <label>PASSWORD</label>
+            <input type="text" id="a3" onchange="checkpassword()">
+            <p id="b3"></p>
+            <label>CONFIRM PASSWORD</label>
+            <input type="text" id="a4" onchange="confirmpassword()">
+            <p id="b4"></p>
+          
+            <p id="b5"></p>
+            <label>MOBILE NO</label>
+            <input type="text" id="a6" onchange="checkmobile()">
+            <p id="b6"></p>
+            
+            <button>REGISTER</button>
+        </div>
+    </div>
+</form>
+<script>
+     function checkusername()
+    {
+        var pattern=/^[a-z]{4}[0-9]{4}$/;
+        var input=document.getElementById("a1").value;
+        if(!pattern.test(input))
+        {
+            document.getElementById("b1").innerHTML="Invalid username";
+            document.getElementById("b1").style ="color : red";
+        }
+        else{
+            document.getElementById("b1").innerHTML="valid username";
+            document.getElementById("b1").style ="color : green";
+        }
+    }
+
+
+    function checkEMAIL()
+    {
+        var pattern=/^[a-z]{4}[0-9]{4}$/;
+        var input=document.getElementById("a2").value;
+        if(!pattern.test(input))
+        {
+            document.getElementById("b2").innerHTML="Invalid username";
+            document.getElementById("b2").style ="color : red";
+        }
+        else{
+            document.getElementById("b2").innerHTML="valid username";
+            document.getElementById("b2").style ="color : green";
+        }
+    }
+
+
+
+    function checkpassword()
+    {
+        var pattern=/^[a-z]{4}[0-9]{4}$/;
+        var input=document.getElementById("a3").value;
+        if(!pattern.test(input))
+        {
+            document.getElementById("b3").innerHTML="Invalid username";
+            document.getElementById("b3").style ="color : red";
+        }
+        else{
+            document.getElementById("b3").innerHTML="valid username";
+            document.getElementById("b3").style ="color : green";
+        }
+    }
+
+
+
+
+
+    function  confirmpassword()
+    {
+        if (document.getElementById("a4").value == document.getElementById("a3").value){
+            document.getElementById("b4").innerHTML="valid username";
+            document.getElementById("b4").style ="color :green";
+        }
+        else{
+            document.getElementById("b4").innerHTML= "Invalid username";
+            document.getElementById("b4").style ="color : red";
+        } 
+        }
+    
+    function checkmobile()
+    {
+        var pattern=/^[0-9]{10}$/;
+        var input=document.getElementById("a6").value;
+        if(!pattern.test(input))
+        {
+            document.getElementById("b6").innerHTML="Invalid username";
+            document.getElementById("b6").style ="color : red";
+        }
+        else{
+            document.getElementById("b6").innerHTML="valid username";
+            document.getElementById("b6").style ="color : green";
+        }
+    }
+
+</script>
+</body>
+</html>
